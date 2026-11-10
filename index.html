@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="az">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>QR Creator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="container">
+        <h1>QR Creator</h1>
+        <p>Link və ya mətn daxil et</p>
+
+        <input
+            type="text"
+            id="qrText"
+            placeholder="Məsələn: https://example.com"
+        >
+
+        <button onclick="generateQR()">QR yarat</button>
+
+        <div id="qrCode"></div>
+
+        <button id="downloadBtn" onclick="downloadQR()" style="display:none;">
+            QR-ni yüklə
+        </button>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/qrcodejs@1.0.0/qrcode.min.js"></script>
+    <script src="script.js"></script>
+
+</body>
+</html>
