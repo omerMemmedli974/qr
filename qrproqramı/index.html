@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="az">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>QR Creator</title>
+    <link rel="stylesheet" href="style.css">
+    <meta name="google-site-verification" content="x8j298e0FZ2vTMX7cbogvYIy5MtDrSC0n56mOa7V4Gw" />
+</head>
+
+<body>
+
+    <div class="container">
+
+        <h1>QR Creator</h1>
+        <p>Link daxil et</p>
+
+        <input
+            type="text"
+            id="qrText"
+            placeholder="Məsələn: https://example.com"
+        >
+
+        <button onclick="generateQR()">QR yarat</button>
+
+        <div id="qrCode"></div>
+
+        <button id="downloadBtn"
+            onclick="downloadQR()"
+            style="display:none;">
+            QR-ni yüklə
+        </button>
+
+        <hr>
+
+        <h2>QR oxut</h2>
+        <p>Kamera və ya şəkil vasitəsilə QR kodu oxut.</p>
+
+        <div id="reader"></div>
+
+        <button id="camStartBtn" onclick="startCamera()">📷 Kameranı aç</button>
+        <button id="camStopBtn" onclick="stopCamera()" style="display:none;">⏹ Kameranı bağla</button>
+        <button onclick="chooseFile()">🖼 Şəkildən oxu</button>
+        <input type="file" id="fileInput" accept="image/*" style="display:none;">
+
+        <h3>Oxunan nəticə:</h3>
+
+        <input
+            type="text"
+            id="scanResult"
+            placeholder="QR nəticəsi burada görünəcək"
+            readonly
+        >
+
+        <button id="copyBtn"
+            onclick="copyResult()"
+            style="display:none;">
+            📋 Nəticəni kopyala
+        </button>
+
+        <button id="openBtn"
+            onclick="openResult()"
+            style="display:none;">
+            🔗 Linki aç
+        </button>
+
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html5-qrcode/2.3.8/html5-qrcode.min.js"></script>
+    <script src="script.js"></script>
+
+</body>
+</html>
