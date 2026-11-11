@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="az">
 <head>
@@ -10,9 +11,11 @@
 <body>
 
     <div class="container">
+
         <h1>QR Creator</h1>
         <p>Link və ya mətn daxil et</p>
 
+        <!-- QR yaratmaq -->
         <input
             type="text"
             id="qrText"
@@ -23,12 +26,49 @@
 
         <div id="qrCode"></div>
 
-        <button id="downloadBtn" onclick="downloadQR()" style="display:none;">
+        <button id="downloadBtn"
+            onclick="downloadQR()"
+            style="display:none;">
             QR-ni yüklə
         </button>
+
+        <hr>
+
+        <!-- QR oxutmaq -->
+        <h2>QR oxut</h2>
+        <p>Kamera və ya şəkil vasitəsilə QR kodu oxut.</p>
+
+        <div id="reader"></div>
+
+        <h3>Oxunan nəticə:</h3>
+
+        <input
+            type="text"
+            id="scanResult"
+            placeholder="QR nəticəsi burada görünəcək"
+            readonly
+        >
+
+        <button id="copyBtn"
+            onclick="copyResult()"
+            style="display:none;">
+            📋 Nəticəni kopyala
+        </button>
+
+        <button id="openBtn"
+            onclick="openResult()"
+            style="display:none;">
+            🔗 Linki aç
+        </button>
+
     </div>
 
-    <script src="https://cdn.jsdelivr.net/npm/qrcodejs@1.0.0/qrcode.min.js"></script>
+    <!-- Kitabxanalar -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
+
+    <script src="https://unpkg.com/html5-qrcode"></script>
+
+    <!-- Öz JavaScript faylımız -->
     <script src="script.js"></script>
 
 </body>

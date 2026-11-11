@@ -1,0 +1,101 @@
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #f2f2f2;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 30px 15px;
+}
+
+.container {
+    background: white;
+    width: 100%;
+    max-width: 450px;
+    padding: 30px;
+    border-radius: 20px;
+    text-align: center;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+}
+
+h1 {
+    margin-bottom: 10px;
+}
+
+h2 {
+    margin: 20px 0 10px;
+}
+
+h3 {
+    margin: 15px 0 10px;
+}
+
+p {
+    color: #666;
+    margin-bottom: 20px;
+}
+
+input {
+    width: 100%;
+    padding: 14px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    font-size: 16px;
+    margin-bottom: 12px;
+}
+
+button {
+    width: 100%;
+    padding: 14px;
+    border: none;
+    border-radius: 10px;
+    background: #111;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    margin-top: 5px;
+}
+
+button:hover {
+    background: #333;
+}
+
+#qrCode {
+    margin: 25px auto;
+    display: flex;
+    justify-content: center;
+}
+
+#reader {
+    width: 100%;
+    max-width: 400px;
+    margin: 20px auto;
+}
+
+#scanResult {
+    margin-top: 10px;
+}
+
+#copyBtn,
+#openBtn {
+    margin-top: 10px;
+}
+
+hr {
+    margin: 25px 0;
+    border: 0;
+    border-top: 1px solid #ddd;
+}
+
+@media (max-width: 500px) {
+    .container {
+        padding: 20px;
+    }
+}
